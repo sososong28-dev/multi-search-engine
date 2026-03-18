@@ -1,0 +1,48 @@
+{
+  "name": "multi-search-engine",
+  "version": "1.4.0",
+  "description": "多引擎联网搜索技能 - 支持免 API 模式（直接抓取搜索引擎结果页）和 API 模式。支持必应中国、Google、Google 香港、百度、搜狗等搜索引擎，以及数英网、SocialBeta、站酷等专业网站。解决搜索结果返回英文的问题，专注营销案例、广告创意、产品设计搜索。",
+  "author": "Nelson",
+  "license": "MIT",
+  "keywords": [
+    "openclaw",
+    "skill",
+    "search",
+    "web",
+    "internet",
+    "chinese",
+    "bing",
+    "google",
+    "baidu",
+    "marketing",
+    "design",
+    "no-api"
+  ],
+  "engines": {
+    "openclaw": ">=1.0.0"
+  },
+  "scripts": {
+    "test": "python scripts/test_search.py",
+    "example": "python scripts/search_example.py",
+    "search": "python scripts/search_no_api.py"
+  },
+  "config": {
+    "defaultEngine": "bing-cn",
+    "forceChinese": true,
+    "requiresApiKey": false,
+    "noApiMode": true,
+    "apiKeyEnv": "BRAVE_API_KEY",
+    "supportedEngines": ["bing", "google", "google-hk", "baidu", "sogo"],
+    "recommendedSites": [
+      "digitaling.com",
+      "socialbeta.com",
+      "zcool.com.cn",
+      "woshipm.com",
+      "stock.xinpianchang.com",
+      "cbndata.com",
+      "techcrunch.com",
+      "bastillepost.com",
+      "unwire.hk"
+    ]
+  }
+}
