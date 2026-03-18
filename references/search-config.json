@@ -1,0 +1,83 @@
+{
+  "name": "中文搜索引擎配置",
+  "description": "配置 multi-search-engine 优先使用中文搜索引擎，解决搜索结果返回英文的问题",
+  "defaultEngine": "bing-cn",
+  "forceChinese": true,
+  "engines": {
+    "bing-cn": {
+      "name": "必应中国",
+      "url": "https://cn.bing.com",
+      "country": "CN",
+      "language": "zh",
+      "search_lang": "zh-hans",
+      "ui_lang": "zh-CN",
+      "priority": 1
+    },
+    "google": {
+      "name": "Google",
+      "url": "https://www.google.com",
+      "country": "US",
+      "language": "zh-CN",
+      "search_lang": "zh-hans",
+      "ui_lang": "zh-CN",
+      "priority": 2,
+      "note": "全球最大搜索引擎，结果更全面，需要特殊网络配置"
+    },
+    "google-hk": {
+      "name": "Google 香港",
+      "url": "https://www.google.com.hk",
+      "country": "HK",
+      "language": "zh-CN",
+      "search_lang": "zh-hans",
+      "ui_lang": "zh-CN",
+      "priority": 3,
+      "note": "中文结果较好，无需特殊网络"
+    },
+    "baidu": {
+      "name": "百度",
+      "url": "https://www.baidu.com",
+      "country": "CN",
+      "language": "zh",
+      "search_lang": "zh-hans",
+      "priority": 4,
+      "note": "需要额外配置 API 或通过 web_fetch 抓取搜索结果页"
+    },
+    "sogo": {
+      "name": "搜狗",
+      "url": "https://www.sogou.com",
+      "country": "CN",
+      "language": "zh",
+      "search_lang": "zh-hans",
+      "priority": 5,
+      "note": "需要额外配置 API 或通过 web_fetch 抓取搜索结果页"
+    }
+  },
+  "defaultParams": {
+    "country": "CN",
+    "language": "zh",
+    "search_lang": "zh-hans",
+    "ui_lang": "zh-CN"
+  },
+  "specialSearches": {
+    "wechat": {
+      "description": "微信公众号搜索",
+      "querySuffix": " 公众号 微信",
+      "engine": "bing-cn"
+    },
+    "zhihu": {
+      "description": "知乎搜索",
+      "querySuffix": " site:zhihu.com",
+      "engine": "bing-cn"
+    },
+    "baidu": {
+      "description": "百度搜索",
+      "querySuffix": " site:baidu.com",
+      "engine": "bing-cn"
+    },
+    "google": {
+      "description": "Google 搜索",
+      "querySuffix": "",
+      "engine": "google"
+    }
+  }
+}
